@@ -28,5 +28,41 @@ body, a:link, a:visited, a:active{
 }
 
 .dynamite{
-  width: 50px;
+  width: 100px;
+  animation: 1s infinite rotateGuy;
+  box-shadow:5px 5px 5px red;
+  border-radius: 50%;
+}
+
+.dynamite:hover {
+  width: 120px;
+  animation: 1s infinite hoverOver;
+}
+
+
+@keyframes rotateGuy {
+  0% {
+    transform: rotateY(0deg) rotateZ(-25deg);
+
+  }
+  50% {
+    transform: rotateZ(25deg);
+    box-shadow: 5px 5px 5px transparent;
+  }
+  100% {
+    transform: rotateY(360deg) rotateZ(-25deg);
+  }
+}
+
+@keyframes hoverOver {
+  0% {
+    transform: scale(1);
+  }
+  50%{
+    transform: scale(5);
+  }
+  100% {
+    transform: scale(1);
+  }
+
 }
