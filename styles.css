@@ -1,40 +1,49 @@
-body, html{
-  height:100%;
-  background-image: url('https://files.slack.com/files-pri/T5B2RG0JW-FUL3Y1N1Y/image.png')
+body,
+html {
+  height: 100%;
+  background-image: url('https://files.slack.com/files-pri/T5B2RG0JW-FUL3Y1N1Y/image.png');
 }
-body{
+body {
   margin: 0px;
-  background-color:#444;
+  background-color: #444;
   font-size: 18px;
 }
-body, a:link, a:visited, a:active{
+body,
+a:link,
+a:visited,
+a:active {
   color: lightblue;
 }
-.title, .addDancerButton{
-  padding:5px 12px;
-  float:right;
+.title,
+.addDancerButton {
+  padding: 5px 12px;
+  float: right;
 }
-.topbar{
-  height:32px;
+.topbar {
+  height: 32px;
   background-color: #555;
 }
-.title{
+.title {
   background-color: #777;
 }
 
-.dancer{
-  border:10px solid red;
-  border-radius:10px;
-  position:absolute;
+.dancer {
+  border: 10px solid red;
+  border-radius: 10px;
+  position: absolute;
 }
 
-.dynamite{
+.dynamite {
   position: absolute;
   width: 100px;
   animation: 1s infinite rotateGuy;
-  box-shadow:5px 5px 5px red;
+  box-shadow: 5px 5px 5px red;
   border-radius: 50%;
-  transition: width 1s;
+  transition: width left 1s;
+}
+
+.dynamite-lineup {
+  left: 200px;
 }
 
 .dynamite:hover {
@@ -47,11 +56,9 @@ body, a:link, a:visited, a:active{
   width: 300px;
 }
 
-
 @keyframes rotateGuy {
   0% {
     transform: rotateY(0deg) rotateZ(-25deg);
-
   }
   50% {
     transform: rotateZ(25deg);
@@ -66,11 +73,10 @@ body, a:link, a:visited, a:active{
   0% {
     transform: scale(1);
   }
-  50%{
+  50% {
     transform: scale(5);
   }
   100% {
     transform: scale(1);
   }
-
 }

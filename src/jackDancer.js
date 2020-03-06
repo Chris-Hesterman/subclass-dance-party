@@ -1,4 +1,4 @@
-var jackDancer = function (top, left, timeBetweenSteps){
+var jackDancer = function(top, left, timeBetweenSteps) {
   makeDancer.call(this, top, left, timeBetweenSteps);
   //.$node = $('<span class="dancer"></span>')
   this.$node = $('<img class="jack" src="../media/jack.gif">');
@@ -9,7 +9,7 @@ var jackDancer = function (top, left, timeBetweenSteps){
 jackDancer.prototype = Object.create(makeDancer.prototype);
 jackDancer.prototype.constructor = jackDancer;
 
-jackDancer.prototype.step = function (){
+jackDancer.prototype.step = function() {
   this.oldStep();
   this.step();
 };
