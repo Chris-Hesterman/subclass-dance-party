@@ -1,5 +1,6 @@
 body, html{
   height:100%;
+  background-image: url('https://files.slack.com/files-pri/T5B2RG0JW-FUL3Y1N1Y/image.png')
 }
 body{
   margin: 0px;
@@ -28,15 +29,22 @@ body, a:link, a:visited, a:active{
 }
 
 .dynamite{
+  position: absolute;
   width: 100px;
   animation: 1s infinite rotateGuy;
   box-shadow:5px 5px 5px red;
   border-radius: 50%;
+  transition: width 1s;
 }
 
 .dynamite:hover {
   width: 120px;
   animation: 1s infinite hoverOver;
+}
+
+.jack {
+  position: absolute;
+  width: 300px;
 }
 
 
