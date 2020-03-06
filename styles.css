@@ -1,7 +1,8 @@
 body,
 html {
   height: 100%;
-  background-image: url('https://files.slack.com/files-pri/T5B2RG0JW-FUL3Y1N1Y/image.png');
+  background-image: url('./media/volcano.jpg');
+  background-size: cover;
 }
 body {
   margin: 0px;
@@ -27,33 +28,45 @@ a:active {
   background-color: #777;
 }
 
+.dancefloor {
+  position: relative;
+  margin-right: auto;
+  margin-left: auto;
+  width: 80vw;
+  height: 80vh;
+}
+
 .dancer {
-  border: 10px solid red;
-  border-radius: 10px;
+  border: 2px solid orange;
+  border-radius: 2px;
   position: absolute;
 }
 
 .dynamite {
   position: absolute;
-  width: 100px;
+  width: 130px;
   animation: 1s infinite rotateGuy;
   box-shadow: 5px 5px 5px red;
   border-radius: 50%;
-  transition: width left 1s;
+  transition: width 1s;
 }
 
 .dynamite-lineup {
-  left: 200px;
+  left: 130px;
 }
 
 .dynamite:hover {
-  width: 120px;
-  animation: 1s infinite hoverOver;
+  width: 170px;
 }
 
 .jack {
   position: absolute;
-  width: 300px;
+  width: 130px;
+  transition: width 1s;
+}
+
+.jack:hover {
+  width: 50px;
 }
 
 @keyframes rotateGuy {

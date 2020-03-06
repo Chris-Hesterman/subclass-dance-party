@@ -3,7 +3,7 @@ var napoleonDancer = function(top, left, timeBetweenSteps) {
   //this.$node = $('<span class="dancer"></span>')
   this.$node = $('<img class="dynamite" src="../media/napoleon.gif">');
   this.oldStep = makeDancer.prototype.step;
-  this.lineUp = napoleonDancer.prototype.lineUp();
+  //this.lineUp = napoleonDancer.prototype.lineUp();
   this.setPosition(top, left);
 };
 
@@ -15,13 +15,13 @@ napoleonDancer.prototype.step = function() {
   this.step();
 };
 
-napoleonDancer.prototype.lineUp = function() {
-  // var top = $('body').height() * Math.random();
-  // var left = '200px';
+// napoleonDancer.prototype.lineUp = function() {
+//   // var top = $('body').height() * Math.random();
+//   // var left = '200px';
 
-  // var styleSettings = {
-  //   top: top,
-  //   left: left
-  // };
-  this.$node.addClass('napoleon-lineup');
-};
+//   // var styleSettings = {
+//   //   top: top,
+//   //   left: left
+//   // };
+//   this.$node.addClass('napoleon-lineup');
+// };
