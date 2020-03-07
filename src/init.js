@@ -36,8 +36,12 @@ $(document).ready(function() {
   $('.lineup').on('click', function(event) {
     for (var i = 0; i < window.dancers.length; i++) {
       console.log(window.dancers[i][0]);
-
       window.dancers[i][0].classList.add('jackLineUp');
+      setTimeout(() => {
+        window.dancers.forEach((dancer) => {
+          dancer[0].style.left = 0;
+        });
+      }, 2000);
     }
   });
 
@@ -56,10 +60,28 @@ $(document).ready(function() {
     // window.dancers[dancer1][0].style.top = '30vw';
     // window.dancers[dancer2][0].style.left = '45vw';
     // window.dancers[dancer2][0].style.top = '30vw';
+    // window.dancers[dancer1][0].style.left = 0;
+    // window.dancers[dancer2][0].style.left = 0;
+    // window.dancers[dancer1][0].classList.forEach(function(dClass) {
+    //   // console.log(dClass === 'dancerOne');
+    //   // console.log(dClass === 'dancerTwo');
+    //   if (dClass === 'dancerOne' || dClass === 'dancerTwo') {
+    //     window.dancers[dancer1][0].classList.remove('dancerOne');
+    //     window.dancers[dancer1][0].classList.remove('dancerTwo');
+    //   }
+    // });
+
+    // window.dancers[dancer2][0].classList.forEach(function(dClass) {
+    //   if (dClass === 'dancerOne' || dClass === 'dancerTwo') {
+    //     window.dancers[dancer2][0].classList.remove('dancerOne');
+    //     window.dancers[dancer2][0].classList.remove('dancerTwo');
+    //   }
+    // });
+
     window.dancers[dancer1][0].classList.add('dancerOne');
     window.dancers[dancer2][0].classList.add('dancerTwo');
-    window.dancers[dancer1][0].classList.remove('jackLineUp');
-    window.dancers[dancer2][0].classList.remove('jackLineUp');
+    // window.dancers[dancer1][0].classList.remove('jackLineUp');
+    // window.dancers[dancer2][0].classList.remove('jackLineUp');
 
     setTimeout(function() {
       // window.dancers[dancer1][0].style.left = oldDancer1Left;
@@ -68,8 +90,8 @@ $(document).ready(function() {
       // window.dancers[dancer2][0].style.top = oldDancer2Top;
       window.dancers[dancer1][0].classList.remove('dancerOne');
       window.dancers[dancer2][0].classList.remove('dancerTwo');
-      window.dancers[dancer1][0].classList.add('jackLineUp');
-      window.dancers[dancer2][0].classList.add('jackLineUp');
+      // window.dancers[dancer1][0].classList.add('jackLineUp');
+      // window.dancers[dancer2][0].classList.add('jackLineUp');
     }, 5000);
   });
 });
