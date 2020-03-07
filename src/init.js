@@ -34,16 +34,42 @@ $(document).ready(function() {
   });
 
   $('.lineup').on('click', function(event) {
-    // window.dancers.forEach(function(dancer) {
-    //   var lineUp = $(this).data('lineUp-function');
-    //   console.log(dancer.init[0]);
-    //   console.log(window.dancers);
-    //   $(dancer).window[lineUp];
-    // });
-    // console.log(window);
     for (var i = 0; i < window.dancers.length; i++) {
       console.log(window.dancers[i][0]);
-      window.dancers[i][0].style.left = '0px';
+
+      window.dancers[i][0].classList.add('jackLineUp');
     }
+  });
+
+  $('.danceoff').on('click', function() {
+    //generate 2 random integers within dancers length
+    //edit each dancer's location to move into the middle
+    //make them perform custom move
+    //reset each dancer's location to previous location after setTimeout
+    let dancer1 = Math.floor(Math.random() * window.dancers.length);
+    let dancer2 = Math.floor(Math.random() * window.dancers.length);
+
+    while (dancer1 === dancer2) {
+      dancer1 = Math.floor(Math.random() * window.dancers.length);
+    }
+    // window.dancers[dancer1][0].style.left = '35vw';
+    // window.dancers[dancer1][0].style.top = '30vw';
+    // window.dancers[dancer2][0].style.left = '45vw';
+    // window.dancers[dancer2][0].style.top = '30vw';
+    window.dancers[dancer1][0].classList.add('dancerOne');
+    window.dancers[dancer2][0].classList.add('dancerTwo');
+    window.dancers[dancer1][0].classList.remove('jackLineUp');
+    window.dancers[dancer2][0].classList.remove('jackLineUp');
+
+    setTimeout(function() {
+      // window.dancers[dancer1][0].style.left = oldDancer1Left;
+      // window.dancers[dancer1][0].style.top = oldDancer1Top;
+      // window.dancers[dancer2][0].style.left = oldDancer2Left;
+      // window.dancers[dancer2][0].style.top = oldDancer2Top;
+      window.dancers[dancer1][0].classList.remove('dancerOne');
+      window.dancers[dancer2][0].classList.remove('dancerTwo');
+      window.dancers[dancer1][0].classList.add('jackLineUp');
+      window.dancers[dancer2][0].classList.add('jackLineUp');
+    }, 5000);
   });
 });

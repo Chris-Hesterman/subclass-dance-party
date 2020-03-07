@@ -1,7 +1,7 @@
 body,
 html {
   height: 100%;
-  background-image: url('./media/volcano.jpg');
+  background-image: url('volcano.jpg');
   background-size: cover;
 }
 body {
@@ -69,6 +69,48 @@ a:active {
   width: 50px;
 }
 
+.jackLineUp {
+  animation: 2s 1 lineUp forwards;
+}
+
+.dancerOne {
+  animation: 5s 1 dancerOne;
+}
+
+.dancerTwo {
+  animation: 5s 1 dancerTwo;
+}
+
+@keyframes dancerOne {
+  0% {
+    left: 0;
+  }
+
+  50% {
+    top: 30vh;
+    left: 35vw;
+  }
+
+  100% {
+    left: 0;
+  }
+}
+
+@keyframes dancerTwo {
+  0% {
+    left: 0;
+  }
+
+  50% {
+    top: 30vh;
+    left: 45vw;
+  }
+
+  100% {
+    left: 0;
+  }
+}
+
 @keyframes rotateGuy {
   0% {
     transform: rotateY(0deg) rotateZ(-25deg);
@@ -91,5 +133,11 @@ a:active {
   }
   100% {
     transform: scale(1);
+  }
+}
+
+@keyframes lineUp {
+  100% {
+    left: 0px;
   }
 }

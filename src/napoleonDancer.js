@@ -1,7 +1,7 @@
 var napoleonDancer = function(top, left, timeBetweenSteps) {
   makeDancer.call(this, top, left, timeBetweenSteps);
   //this.$node = $('<span class="dancer"></span>')
-  this.$node = $('<img class="dynamite" src="../media/napoleon.gif">');
+  this.$node = $('<img class="dynamite" src="napoleon.gif">');
   this.oldStep = makeDancer.prototype.step;
   //this.lineUp = napoleonDancer.prototype.lineUp();
   this.setPosition(top, left);
