@@ -87,6 +87,12 @@ a:active {
   animation: 5s 1 dancerTwo both;
 }
 
+.fire {
+  margin-top: 10vh;
+  height: 40px;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
 @keyframes dancerOne {
   0% {
     left: 0;
