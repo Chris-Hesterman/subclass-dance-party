@@ -30,12 +30,11 @@ $(document).ready(function() {
 
     $('.dancefloor').append(dancer.$node);
     window.dancers.push(dancer.$node);
-    console.log(window.dancers);
+    console.log(window.dancers[0][0]);
   });
 
   $('.lineup').on('click', function(event) {
     for (var i = 0; i < window.dancers.length; i++) {
-      console.log(window.dancers[i][0]);
       window.dancers[i][0].classList.add('jackLineUp');
       setTimeout(() => {
         window.dancers.forEach((dancer) => {
