@@ -125,4 +125,4 @@ $(document).ready(function() {
 
   setInterval(detect, 500);
 });
-//commit message edit
+//commit message edit e
