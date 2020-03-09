@@ -33,12 +33,12 @@ makeDancer.prototype.setPosition = function(top, left) {
   this.$node.css(styleSettings);
 };
 
-makeDancer.prototype.lineUp = function(top, left) {
-  // Use css top and left properties to position our <span> tag
-  // where it belongs on the page. See http://api.jquery.com/css/
-  //
-  var styleSettings = {
-    top: top,
-    left: '200px'
-  };
-};
+// makeDancer.prototype.lineUp = function(top, left) {
+//   // Use css top and left properties to position our <span> tag
+//   // where it belongs on the page. See http://api.jquery.com/css/
+//   //
+//   var styleSettings = {
+//     top: top,
+//     left: '200px'
+//   };
+// };
