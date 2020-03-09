@@ -25,12 +25,12 @@ $(document).ready(function() {
     var dancer = new dancerMakerFunction(
       $('.dancefloor').height() * Math.random(),
       $('.dancefloor').width() * Math.random(),
-      Math.random() * 1000
+      1500
     );
 
     $('.dancefloor').append(dancer.$node);
     window.dancers.push(dancer.$node);
-    console.log(window.dancers[0][0]);
+
   });
 
   $('.lineup').on('click', function(event) {
@@ -55,27 +55,6 @@ $(document).ready(function() {
     while (dancer1 === dancer2) {
       dancer1 = Math.floor(Math.random() * window.dancers.length);
     }
-    // window.dancers[dancer1][0].style.left = '35vw';
-    // window.dancers[dancer1][0].style.top = '30vw';
-    // window.dancers[dancer2][0].style.left = '45vw';
-    // window.dancers[dancer2][0].style.top = '30vw';
-    // window.dancers[dancer1][0].style.left = 0;
-    // window.dancers[dancer2][0].style.left = 0;
-    // window.dancers[dancer1][0].classList.forEach(function(dClass) {
-    //   // console.log(dClass === 'dancerOne');
-    //   // console.log(dClass === 'dancerTwo');
-    //   if (dClass === 'dancerOne' || dClass === 'dancerTwo') {
-    //     window.dancers[dancer1][0].classList.remove('dancerOne');
-    //     window.dancers[dancer1][0].classList.remove('dancerTwo');
-    //   }
-    // });
-
-    // window.dancers[dancer2][0].classList.forEach(function(dClass) {
-    //   if (dClass === 'dancerOne' || dClass === 'dancerTwo') {
-    //     window.dancers[dancer2][0].classList.remove('dancerOne');
-    //     window.dancers[dancer2][0].classList.remove('dancerTwo');
-    //   }
-    // });
 
     window.dancers[dancer1][0].classList.add('dancerOne');
     window.dancers[dancer2][0].classList.add('dancerTwo');
@@ -93,4 +72,33 @@ $(document).ready(function() {
       // window.dancers[dancer2][0].classList.add('jackLineUp');
     }, 5000);
   });
+
+  var detect = function(){
+    var findDistance = function(dancer1, dancer2){
+      var x1 = dancer1[0].x;
+      var y1 = dancer1[0].y;
+
+      var x2 = dancer2[0].x;
+      var y2 = dancer2[0].y;
+
+      var distance = Math.sqrt( ( ( Math.abs(x1 - x2)**2) )  + ( ( Math.abs(y1 - y2)**2) ));
+      console.log(distance);
+      return distance;
+    }
+
+    var dancer1 = window.dancers[0];
+    var dancer2 = window.dancers[1];
+
+    var distanceCheck = findDistance(dancer1, dancer2)
+
+    if(distanceCheck !== 0 && distanceCheck < 200){
+      $(dancer1[0]).remove();
+      $(dancer2[0]).remove();
+    }
+
+  }
+
+
+
+  setInterval(detect, 1500)
 });

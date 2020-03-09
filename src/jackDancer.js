@@ -9,7 +9,7 @@ var jackDancer = function(top, left, timeBetweenSteps) {
 jackDancer.prototype = Object.create(makeDancer.prototype);
 jackDancer.prototype.constructor = jackDancer;
 
-jackDancer.prototype.step = function() {
-  this.oldStep();
-  this.step();
-};
+// jackDancer.prototype.step = function() {
+//   this.oldStep();
+//   this.step();
+// };

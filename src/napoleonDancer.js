@@ -5,17 +5,17 @@ var napoleonDancer = function(top, left, timeBetweenSteps) {
   this.oldStep = makeDancer.prototype.step;
   //this.lineUp = napoleonDancer.prototype.lineUp();
   this.setPosition(top, left);
-  this.step();
+  //this.step();
 };
 
 napoleonDancer.prototype = Object.create(makeDancer.prototype);
 napoleonDancer.prototype.constructor = napoleonDancer;
 
-napoleonDancer.prototype.step = function() {
-  this.oldStep();
-  console.log('hi');
-  setTimeout(this.step.bind(this), 1000);
-};
+// napoleonDancer.prototype.step = function() {
+//   this.oldStep();
+//   console.log('hi');
+//   setTimeout(this.step.bind(this), 1000);
+// };
 
 // napoleonDancer.prototype.lineUp = function() {
 //   // var top = $('body').height() * Math.random();
