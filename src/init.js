@@ -94,6 +94,7 @@ $(document).ready(function() {
     if(distanceCheck !== 0 && distanceCheck < 200){
       $(dancer1[0]).remove();
       $(dancer2[0]).remove();
+      window.dancers.splice(0, 2);
     }
 
   }
