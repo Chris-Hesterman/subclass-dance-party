@@ -115,7 +115,7 @@ $(document).ready(function() {
     if (window.dancers.length > 1) {
       var distanceCheck = findDistance(dancer1, dancer2);
 
-      if (distanceCheck !== 0 && distanceCheck < 200) {
+      if (distanceCheck !== 0 && distanceCheck < 250) {
         $(dancer1[0]).remove();
         $(dancer2[0]).remove();
         window.dancers.splice(0, 2)
